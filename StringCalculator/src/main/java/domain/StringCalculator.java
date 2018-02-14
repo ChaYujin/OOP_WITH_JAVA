@@ -6,15 +6,17 @@ public class StringCalculator {
         if(isBlank(inputValue)){
             throw new IllegalArgumentException();
         }
+        String[] splitValues = inputValue.split(" ");
+        int result = 0;
 
         return 0;
     }
 
-    private static String[] split(String inputValue) {
+    public static String[] split(String inputValue) {
         return inputValue.split(" ");
     }
 
-    private static boolean isBlank(String inputValue) {
+    public static boolean isBlank(String inputValue) {
         return inputValue.isEmpty() || inputValue == null;
     }
 }
