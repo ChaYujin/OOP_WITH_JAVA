@@ -22,4 +22,14 @@ public class StringCalculatorTest{
     public void isBlank() {
         assertThat(StringCalculator.isBlank("")).isEqualTo(true);
     }
+
+    @Test
+    public void calculate_simple() {
+        assertThat(StringCalculator.calculate("3 + 4")).isEqualTo(7);
+    }
+
+    @Test
+    public void calculate_complex() {
+        assertThat(StringCalculator.calculate("3 + 4 * 2")).isEqualTo(14);
+    }
 }

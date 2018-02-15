@@ -1,19 +1,33 @@
 package domain;
 
+import utils.StringUtils;
+
 public class StringCalculator {
 
     public static int calculate(String inputValue){
         if(isBlank(inputValue)){
             throw new IllegalArgumentException();
         }
-        String[] splitValues = inputValue.split(" ");
-        int result = 0;
 
-        return 0;
-    }
+        String[] splitValues = StringUtils.split(inputValue);
+        int result = StringUtils.toInt(splitValues[0]);
 
-    public static String[] split(String inputValue) {
-        return inputValue.split(" ");
+        for (int i = 1; i < splitValues.length; i+=2) {
+            if("+".equals(splitValues[i])){
+                result += StringUtils.toInt(splitValues[i+1]);
+            }
+            if("-".equals(splitValues[i])){
+                result -= StringUtils.toInt(splitValues[i+1]);
+            }
+            if("*".equals(splitValues[i])){
+                result *= StringUtils.toInt(splitValues[i+1]);
+            }
+            if("/".equals(splitValues[i])){
+                result /= StringUtils.toInt(splitValues[i+1]);
+            }
+        }
+
+        return result;
     }
 
     public static boolean isBlank(String inputValue) {
