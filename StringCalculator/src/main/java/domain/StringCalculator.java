@@ -4,7 +4,7 @@ import utils.StringUtils;
 
 public class StringCalculator {
 
-    public static int calculate(String inputValue){
+    public static int calculator(String inputValue){
         if(isBlank(inputValue)){
             throw new IllegalArgumentException();
         }
@@ -13,20 +13,25 @@ public class StringCalculator {
         int result = StringUtils.toInt(splitValues[0]);
 
         for (int i = 1; i < splitValues.length; i+=2) {
-            if("+".equals(splitValues[i])){
-                result += StringUtils.toInt(splitValues[i+1]);
-            }
-            if("-".equals(splitValues[i])){
-                result -= StringUtils.toInt(splitValues[i+1]);
-            }
-            if("*".equals(splitValues[i])){
-                result *= StringUtils.toInt(splitValues[i+1]);
-            }
-            if("/".equals(splitValues[i])){
-                result /= StringUtils.toInt(splitValues[i+1]);
-            }
+            result = calculate(splitValues[i], StringUtils.toInt(splitValues[i+1]), result);
         }
 
+        return result;
+    }
+
+    public static int calculate(String operator, int value, int result) {
+        if("+".equals(operator)){
+            result += value;
+        }
+        if("-".equals(operator)){
+            result -= value;
+        }
+        if("*".equals(operator)){
+            result *= value;
+        }
+        if("/".equals(operator)){
+            result /= value;
+        }
         return result;
     }
 

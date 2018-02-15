@@ -10,7 +10,7 @@ public class StringCalculatorMain {
         Scanner sc = new Scanner(System.in);
         String inputValue = InputView.inputStr(sc);
 
-        CalculateResult result = new CalculateResult(StringCalculator.calculate(inputValue));
+        CalculateResult result = new CalculateResult(StringCalculator.calculator(inputValue));
 
         OutputView.printResult(result);
     }
