@@ -81,14 +81,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringCalculator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StringCalculator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/StringCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
+            <state relative-caret-position="495">
               <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
               <folding>
                 <element signature="e#982#983#0" expanded="true" />
                 <element signature="e#1047#1048#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Number.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/domain/Number.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+              <folding>
+                <element signature="e#91#92#0" expanded="true" />
+                <element signature="e#125#126#0" expanded="true" />
+                <element signature="e#421#422#0" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#609#610#0" expanded="true" />
+                <element signature="e#665#666#0" expanded="true" />
+                <element signature="e#800#801#0" expanded="true" />
+                <element signature="e#856#857#0" expanded="true" />
+                <element signature="e#989#990#0" expanded="true" />
+                <element signature="e#1045#1046#0" expanded="true" />
+                <element signature="e#1821#1822#0" expanded="true" />
+                <element signature="e#1882#1883#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -472,6 +495,7 @@
         <option value="$PROJECT_DIR$/src/test/java/StringUtilsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/StringCalculator.java" />
         <option value="$PROJECT_DIR$/src/test/java/StringCalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Number.java" />
       </list>
     </option>
   </component>
@@ -804,7 +828,7 @@
       <option name="presentableId" value="Default" />
       <updated>1518520611268</updated>
       <workItem from="1518520612838" duration="4906000" />
-      <workItem from="1518658931656" duration="3877000" />
+      <workItem from="1518658931656" duration="7399000" />
     </task>
     <servers />
   </component>
@@ -841,7 +865,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8783000" />
+    <option name="totallyTimeSpent" value="12305000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -1098,11 +1122,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/StringCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
+        <state relative-caret-position="495">
           <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
           <folding>
             <element signature="e#982#983#0" expanded="true" />
             <element signature="e#1047#1048#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Number.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <folding>
+            <element signature="e#91#92#0" expanded="true" />
+            <element signature="e#125#126#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1045#1046#0" expanded="true" />
+            <element signature="e#1821#1822#0" expanded="true" />
+            <element signature="e#1882#1883#0" expanded="true" />
           </folding>
         </state>
       </provider>
