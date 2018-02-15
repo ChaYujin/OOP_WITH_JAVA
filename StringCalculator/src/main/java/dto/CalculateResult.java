@@ -1,17 +1,19 @@
 package dto;
 
-public class CalculateResult {
-    int result;
+import domain.Number;
 
-    public CalculateResult(int result) {
+public class CalculateResult {
+    private Number result;
+
+    public CalculateResult(Number result) {
         this.result = result;
     }
 
-    public int getResult() {
+    public Number getResult() {
         return result;
     }
 
-    public void setResult(int result) {
+    public void setResult(Number result) {
         this.result = result;
     }
 }

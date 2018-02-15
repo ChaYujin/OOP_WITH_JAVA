@@ -18,9 +18,4 @@ public class StringCalculatorTest{
     public void calculator_complex() {
         assertThat(StringCalculator.calculator("3 + 4 * 2")).isEqualTo(14);
     }
-
-    @Test
-    public void calculate_simple() {
-        assertThat(StringCalculator.calculate("+", 3, 4)).isEqualTo(7);
-    }
 }

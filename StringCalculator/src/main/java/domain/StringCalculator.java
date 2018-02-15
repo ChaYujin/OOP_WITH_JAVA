@@ -4,35 +4,18 @@ import utils.StringUtils;
 
 public class StringCalculator {
 
-    public static int calculator(String inputValue){
+    public static Number calculator(String inputValue){
         if(isBlank(inputValue)){
             throw new IllegalArgumentException();
         }
 
         String[] splitValues = StringUtils.split(inputValue);
-        int result = StringUtils.toInt(splitValues[0]);
-
+        Number number = new Number(StringUtils.toInt(splitValues[0]));
         for (int i = 1; i < splitValues.length; i+=2) {
-            result = calculate(splitValues[i], StringUtils.toInt(splitValues[i+1]), result);
+            number = number.calculate(splitValues[i], new Number(StringUtils.toInt(splitValues[i+1])));
         }
 
-        return result;
-    }
-
-    public static int calculate(String operator, int value, int result) {
-        if("+".equals(operator)){
-            result += value;
-        }
-        if("-".equals(operator)){
-            result -= value;
-        }
-        if("*".equals(operator)){
-            result *= value;
-        }
-        if("/".equals(operator)){
-            result /= value;
-        }
-        return result;
+        return number;
     }
 
     public static boolean isBlank(String inputValue) {

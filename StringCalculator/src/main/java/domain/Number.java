@@ -67,4 +67,8 @@ public class Number {
         }
     }
 
+    @Override
+    public String toString() {
+        return value+"";
+    }
 }
