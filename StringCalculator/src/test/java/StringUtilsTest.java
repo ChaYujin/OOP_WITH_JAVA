@@ -15,4 +15,16 @@ public class StringUtilsTest {
         String[] str = {"1", "2"};
         assertThat(StringUtils.split("1 2")).isEqualTo(str);
     }
+
+    @Test
+    public void split_comma() {
+        String[] str = {"1", "2"};
+        assertThat(StringUtils.split("1,2")).isEqualTo(str);
+    }
+
+    @Test
+    public void split_colon() {
+        String[] str = {"1", "2"};
+        assertThat(StringUtils.split("1:2")).isEqualTo(str);
+    }
 }
