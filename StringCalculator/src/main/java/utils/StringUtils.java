@@ -7,6 +7,6 @@ public class StringUtils {
     }
 
     public static String[] split(String inputValue) {
-        return inputValue.split(",|:");
+        return inputValue.split(",|:| ");
     }
 }

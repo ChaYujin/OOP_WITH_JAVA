@@ -1,19 +1,19 @@
 package dto;
 
-import domain.Number;
+import domain.Positive;
 
 public class CalculateResult {
-    private Number result;
+    private Positive result;
 
-    public CalculateResult(Number result) {
+    public CalculateResult(Positive result) {
         this.result = result;
     }
 
-    public Number getResult() {
+    public Positive getResult() {
         return result;
     }
 
-    public void setResult(Number result) {
+    public void setResult(Positive result) {
         this.result = result;
     }
 }

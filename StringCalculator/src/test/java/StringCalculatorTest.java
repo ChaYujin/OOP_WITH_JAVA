@@ -1,12 +1,13 @@
+import domain.Positive;
 import domain.StringCalculator;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class StringCalculatorTest{
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void calculate_isEmpty() {
-        StringCalculator.calculator("");
+        assertThat(StringCalculator.calculator("").equals(new Positive(0))).isEqualTo(true);
     }
 
     @Test

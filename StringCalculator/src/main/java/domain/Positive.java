@@ -2,15 +2,15 @@ package domain;
 
 import java.util.Objects;
 
-public class Number {
+public class Positive {
     private int value;
 
-    public Number(int value){
+    public Positive(int value){
         this.value = value;
     }
 
-    public Number calculate(String operator, Number number){
-        return Calculation.SearchOperator(operator).calculate(this, number);
+    public Positive calculate(String operator, Positive positive){
+        return Calculation.SearchOperator(operator).calculate(this, positive);
     }
 
     private enum Calculation {
@@ -20,7 +20,7 @@ public class Number {
                 return number1 + number2;
             }
         }),
-        MINUX("-", new Calculator(){
+        MINUS("-", new Calculator(){
             @Override
             public int calculate(int number1, int number2) {
                 return number1 - number2;
@@ -47,8 +47,8 @@ public class Number {
             this.calculator = calculator;
         }
 
-        private Number calculate(Number number1, Number number2) {
-            return new Number(this.calculator.calculate(number1.value, number2.value));
+        private Positive calculate(Positive positive1, Positive positive2) {
+            return new Positive(this.calculator.calculate(positive1.value, positive2.value));
         }
 
         private static Calculation SearchOperator(String operator) {
@@ -78,8 +78,8 @@ public class Number {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Number number = (Number) o;
-        return this.value == number.value;
+        Positive positive = (Positive) o;
+        return this.value == positive.value;
     }
 
     @Override

@@ -1,3 +1,4 @@
+import org.junit.Before;
 import org.junit.Test;
 import utils.StringUtils;
 
@@ -11,7 +12,7 @@ public class StringUtilsTest {
     }
 
     @Test
-    public void split() {
+    public void split_space() {
         String[] str = {"1", "2"};
         assertThat(StringUtils.split("1 2")).isEqualTo(str);
     }
@@ -26,5 +27,16 @@ public class StringUtilsTest {
     public void split_colon() {
         String[] str = {"1", "2"};
         assertThat(StringUtils.split("1:2")).isEqualTo(str);
+    }
+
+    @Test
+    public void split_comma_colon() {
+        String[] str = {"1", "2", "3"};
+        assertThat(StringUtils.split("1:2,3")).isEqualTo(str);
+    }
+
+    @Test
+    public void split_custom() {
+
     }
 }
