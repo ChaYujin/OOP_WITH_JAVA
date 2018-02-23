@@ -31,4 +31,9 @@ public class Positive {
 
         return Objects.hash(value);
     }
+
+    @Override
+    public String toString() {
+        return value + "";
+    }
 }

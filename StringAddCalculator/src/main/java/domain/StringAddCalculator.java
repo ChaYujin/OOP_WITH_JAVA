@@ -1,33 +1,39 @@
 package domain;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import utils.CustomSplitter;
+import utils.DefaultSplitter;
+import utils.Spliter;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class StringAddCalculator {
     private Positive result;
+    private List<Spliter> spliters = Arrays.asList(new DefaultSplitter(), new CustomSplitter());
 
     public StringAddCalculator(){
         result = new Positive(0);
     }
 
     public Positive add(String inputValue) {
+
         if(isBlank(inputValue)) {
             return new Positive(0);
         }
 
-        for (String value : split(inputValue)) {
+        for (String value : getSpliter(inputValue).split(inputValue)) {
+            System.out.println(value);
             result.add(new Positive(toInt(value)));
         }
 
         return result;
     }
 
-    private String[] split(String inputValue) {
-        Matcher m = Pattern.compile("//(.)\n(.*)").matcher(inputValue);
-        if (m.find()) {
-            return m.group(2).split(m.group(1));
-        }
-        return inputValue.split(",|:");
+    private Spliter getSpliter(String inputValue){
+        return  spliters.stream()
+                .filter(s->s.support(inputValue))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException());
     }
 
     private int toInt(String inputValue) {
